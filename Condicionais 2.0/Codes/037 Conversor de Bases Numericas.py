@@ -8,12 +8,12 @@ print('2 - Octal')
 print('3 - Hexadecimal')
 base_escolhida = int(input('Para qual base você quer converter? '))
 print('ANALISANDO...')
-sleep(3)
+sleep(2)
 if base_escolhida == 1:
-    print()
+    print('{} convertido em binário ficará {}'.format(numero_escolhido, bin(numero_escolhido)[2:]))
 elif base_escolhida == 2:
-    print()
+    print('{} convertido em octal ficará {}'.format(numero_escolhido, oct(numero_escolhido)[2:]))
 elif base_escolhida == 3:
-    print()
+    print('{} convertido para hexadecimal ficará {}'.format(numero_escolhido, hex(numero_escolhido)[2:]))
 else:
     print('\033[31mOPÇÃO INVÁLIDA\033[m')
