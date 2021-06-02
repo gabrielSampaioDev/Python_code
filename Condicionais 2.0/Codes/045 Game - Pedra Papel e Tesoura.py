@@ -43,3 +43,4 @@ elif computador == 3:
         print('Escolhi Papel. Você venceu...')
     elif jogador == 3:
         print('Empate!!')
+            

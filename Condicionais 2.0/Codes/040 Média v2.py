@@ -10,9 +10,9 @@ if media < 5:
 elif media >= 7:
     print('Você está \033[32maprovado\033[m!!')
     
-elif media >= 5 or media < 7:
+elif media >= 5 and media < 7:
     print('Você está em \033[33mrecuperação\033[m!!')
 
 
 
-print('Sua nota final foi {}.'.format(media))
+print('Sua nota final foi {:.1f}.'.format(media))
