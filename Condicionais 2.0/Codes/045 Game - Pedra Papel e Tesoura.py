@@ -1,3 +1,4 @@
+import emoji
 from random import randint
 from time import sleep
 # INTRO
@@ -5,9 +6,9 @@ print('-=-'*20)
 print('|', ' '*24, 'JOKENPÔ', ' '*23, '|')
 print('-=-'*20)
 # ESCOLHA DO JOGADOR
-print('[ 1 ] PEDRA')
-print('[ 2 ] PAPEL')
-print('[ 3 ] TESOURA')
+print(emoji.emojize('[ 1 ] PEDRA :fist:', use_aliases= True))
+print(emoji.emojize('[ 2 ] PAPEL :hand:', use_aliases= True))
+print(emoji.emojize('[ 3 ] TESOURA :v:', use_aliases = True))
 jogador = int(input('Digite a sua jogada: (ex: 2): '))
 sleep(1)
 print('\033[1;31mJO\033[m')
@@ -22,25 +23,33 @@ computador = randint(1, 3)
     # Papel -> 2
     # Tesoura -> 3
 # CONDICIONAL
-if computador == 1:
+if computador == 1: # Pedra
     if jogador == 1:
+        print(emoji.emojize('Computador :fist: X :fist: Jogador', use_aliases= True))
         print('Empate!')
     elif jogador == 2:
-        print('Escolhi Papel. Ganhei!!')
+        print(emoji.emojize('Computador :fist: X :hand: Jogador', use_aliases= True))
+        print('Jogador venceu!')
     elif jogador == 3:
-        print('Escolhi Tesoura. Você venceu...')
-elif computador == 2:
+        print(emoji.emojize('Computador :fist: X :v: Jogador', use_aliases= True))
+        print('Computador venceu!')
+elif computador == 2: # Papel
     if jogador == 1:
-        print('Escolhi Pedra. Você venceu...')
+        print(emoji.emojize('Computador :hand: X :fist: Jogador', use_aliases= True))
+        print('Computador venceu!')
     elif jogador == 2:
+        print(emoji.emojize('Computador :hand: X :hand: Jogador', use_aliases= True))
         print('Empate!')
     elif jogador == 3:
-        print('Escolhi Tesoura. Ganhei!!')
-elif computador == 3:
+        print(emoji.emojize('Computador :hand: X :v: Jogador', use_aliases= True))
+        print('Jogador venceu!')
+elif computador == 3: # Tesoura
     if jogador == 1:
-        print('Escolhi Pedra. Ganhei!!')
+        print(emoji.emojize('Computador :v: X :fist: Jogador', use_aliases= True))
+        print('Jogador venceu!')
     elif jogador == 2:
-        print('Escolhi Papel. Você venceu...')
+        print(emoji.emojize('Computador :v: X :hand: Jogador', use_aliases= True))
+        print('Computador venceu!')
     elif jogador == 3:
+        print(emoji.emojize('Computador :v: X :v: Jogador', use_aliases= True))
         print('Empate!!')
-            
